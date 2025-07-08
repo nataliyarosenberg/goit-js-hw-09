@@ -2,11 +2,8 @@ const formData = {
   email: '',
   message: '',
 };
-const { email, message } = formData;
 
 const form = document.querySelector('form');
-// form.addEventListener('submit', handleSubmit);
-// form.addEventListener('input', handleInput);
 
 const feedback_key = 'feedback-form-state';
 
@@ -55,8 +52,6 @@ function handleSubmit(event) {
   formData.email = '';
   formData.message = '';
 }
-
+populateForm();
 form.addEventListener('submit', handleSubmit);
 form.addEventListener('input', handleInput);
-
-populateForm();
