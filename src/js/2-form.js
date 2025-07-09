@@ -16,6 +16,13 @@ function populateForm() {
     if (savedData) {
       const parseData = JSON.parse(savedData);
       Object.assign(formData, parseData);
+
+      if (form.elements.email) {
+        form.elements.email.value = formData.email;
+      }
+      if (form.elements.message) {
+        form.elements.message.value = formData.message;
+      }
     }
   } catch (error) {
     console.error('Error parsing', error);
